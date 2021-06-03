@@ -2,6 +2,7 @@ package Controllers;
 
 import com.jfoenix.controls.JFXButton;
 
+
 import Models.User;
 import dbManager.DBHandler;
 
@@ -66,7 +67,31 @@ public class UserTableController {
  		passwordCol.setCellValueFactory(new PropertyValueFactory<User,String>("Password"));
  		userList = getUserData();
  		userTable.setItems(userList);
- 	
+ 		createBtn.setOnAction(new EventHandler<ActionEvent>() {
+        	@Override
+        	public void handle(ActionEvent event) {
+        		createUser();
+        	}
+        });
+    }
+	private void createUser() {
+		createBtn.getScene().getWindow().hide();
+    
+    		FXMLLoader loader = new FXMLLoader();
+    		loader.setLocation(getClass().getResource("/Views/Sample.fxml"));
+    		try {
+				loader.load();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		Parent root = loader.getRoot();
+    		Stage stage= new Stage();
+    		stage.setScene(new Scene(root));
+    		stage.show();
+    		
+    	
+
     }
     
     public ObservableList<User> getUserData(){

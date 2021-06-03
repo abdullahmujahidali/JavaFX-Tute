@@ -11,23 +11,23 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="727.0" style="-fx-background-color: #28333b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UserTableController">
    <children>
-      <JFXButton fx:id="createBtn" layoutX="292.0" layoutY="396.0" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: yellow;" text="Add a User" />
-      <ImageView fitHeight="51.0" fitWidth="64.0" layoutX="342.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+      <JFXButton fx:id="createBtn" layoutX="316.0" layoutY="357.0" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: yellow;" text="Add a User" />
+      <ImageView fitHeight="51.0" fitWidth="64.0" layoutX="338.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../login/src/assets/planet.png" />
          </image>
       </ImageView>
-      <Label layoutX="293.0" layoutY="71.0" text="USER INFORMATION" textFill="WHITE">
+      <Label layoutX="293.0" layoutY="62.0" text="USER INFORMATION" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TableView fx:id="userTable" layoutX="31.0" layoutY="113.0" prefHeight="246.0" prefWidth="671.0">
+      <TableView fx:id="userTable" layoutX="48.0" layoutY="99.0" prefHeight="246.0" prefWidth="615.0">
         <columns>
-          <TableColumn fx:id="idCol" prefWidth="103.20002746582031" text="User ID" />
-          <TableColumn fx:id="nameCol" prefWidth="192.80006408691406" text="Name" />
-            <TableColumn fx:id="emailCol" prefWidth="237.5999755859375" text="Email" />
-            <TableColumn fx:id="passwordCol" prefWidth="136.800048828125" text="Password" />
+          <TableColumn fx:id="idCol" prefWidth="69.60000228881836" text="User ID" />
+          <TableColumn fx:id="nameCol" prefWidth="167.2000274658203" text="Name" />
+            <TableColumn fx:id="emailCol" prefWidth="223.199951171875" text="Email" />
+            <TableColumn fx:id="passwordCol" prefWidth="144.79998779296875" text="Password" />
         </columns>
       </TableView>
    </children>

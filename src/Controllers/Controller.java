@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextField;
 
 import dbManager.DBHandler;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,6 +16,10 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 
 public class Controller {
@@ -50,6 +55,7 @@ public class Controller {
 			public void handle(ActionEvent event) {
 				try {
 					createAccount();
+					goBack();
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -58,6 +64,25 @@ public class Controller {
 		});
 
     }
+	private void goBack() {
+		createBtn.getScene().getWindow().hide();
+    
+    		FXMLLoader loader = new FXMLLoader();
+    		loader.setLocation(getClass().getResource("/Views/UserTable.fxml"));
+    		try {
+				loader.load();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		Parent root = loader.getRoot();
+    		Stage stage= new Stage();
+    		stage.setScene(new Scene(root));
+    		stage.show();
+    		
+
+    }
+    
     public  void createAccount() throws SQLException{
     	String query = " insert into users (Name, Email,Password)"+ "values (?,?,?)";  
     	preparedStatement= connection.prepareStatement(query);
