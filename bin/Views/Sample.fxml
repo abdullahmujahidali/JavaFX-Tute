@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="689.0" style="-fx-background-color: #28333b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
+   <children>
+      <JFXPasswordField fx:id="passwordField" focusColor="WHITE" layoutX="304.0" layoutY="234.0" prefHeight="27.0" prefWidth="252.0" promptText=" Enter your Password" style="-fx-background-color: #718792;" unFocusColor="#3e25cd" />
+      <Label layoutX="163.0" layoutY="139.0" prefHeight="18.0" prefWidth="152.0" text="Name:" textFill="WHITE" />
+      <Label layoutX="163.0" layoutY="196.0" prefHeight="18.0" prefWidth="127.0" text="Email Address:" textFill="WHITE" />
+      <Label layoutX="163.0" layoutY="239.0" prefHeight="18.0" prefWidth="152.0" text="Password:" textFill="WHITE" />
+      <JFXButton fx:id="createBtn" layoutX="269.0" layoutY="302.0" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #d2d2d2;" text="Create Account" />
+      <JFXTextField fx:id="nameField" focusColor="WHITE" layoutX="304.0" layoutY="134.0" prefHeight="27.0" prefWidth="252.0" promptText=" Enter your User Name: " style="-fx-background-color: #718792;" unFocusColor="#d52121" />
+      <JFXTextField fx:id="emailField" focusColor="WHITE" layoutX="304.0" layoutY="182.0" prefHeight="27.0" prefWidth="252.0" promptText=" Enter your Email Address" style="-fx-background-color: #718792;" unFocusColor="#b4c794" />
+      <ImageView fitHeight="51.0" fitWidth="64.0" layoutX="342.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../login/src/assets/planet.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="283.0" layoutY="81.0" text="CREATE AN ACCOUNT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
